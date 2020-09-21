@@ -1,0 +1,74 @@
+def main() {
+    int numberOfPrimes;
+    int primes;
+    int i;
+
+    numberOfPrimes = 32;
+    primes = new int[32];
+
+    for (i = 2; i < numberOfPrimes; i = i + 1) {
+        int halfNumber;
+        int isPrime;
+        int j;
+
+        halfNumber = i / 2;
+        isPrime = 1;
+        
+        for (j = 0; j < halfNumber; j = j + 1) {
+            if (number % j == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+
+        if (isPrime == 1) {
+            primes[i] = j;
+        }
+        else {
+            if (i >= 1) {
+                i = i - 1;
+            }
+        }
+    }
+
+    int multiplier;
+    int k;
+
+    multiplier = 0;
+
+    for (k = 0; k < numberOfPrimes; k = k + 1) {
+        int currentPrime;
+        currentPrime = primes[k];
+
+        for (; currentPrime > 10 * multiplier; multiplier = multiplier + 1) { }
+
+        int previousTen;
+        int nextTen;
+        previousTen = 10 * (multiplier - 1);
+        nextTen = 10 * multiplier;
+
+        print "The prime ";
+        print currentPrime;
+        print " is between ";
+        print previousTen;
+        print " and ";
+        print nextTen;
+    }
+
+    int sumOfPrimes;
+    int index;
+
+    sumOfPrimes = 0;
+
+    for (index = 0; index < numberOfPrimes; index = index + 1) {
+        int currentPrime;
+        currentPrime = primes[k];
+
+        sumOfPrimes = sumOfPrimes + currentPrime;
+    }
+
+    print "The sum of first ";
+    print numberOfPrimes;
+    print " primes is ";
+    print sumOfPrimes;
+}
