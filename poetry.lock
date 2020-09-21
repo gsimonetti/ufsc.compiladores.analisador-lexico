@@ -1,0 +1,20 @@
+[[package]]
+category = "main"
+description = "SLY - Sly Lex Yacc"
+name = "sly"
+optional = false
+python-versions = "*"
+version = "0.4"
+
+[package.extras]
+test = ["pytest", "regex"]
+
+[metadata]
+content-hash = "33d843d3c79fc39a13f3a08bb8c3f0b363d319dbbe8203bdb0e4ad1d29b156b3"
+lock-version = "1.0"
+python-versions = "^3.7"
+
+[metadata.files]
+sly = [
+    {file = "sly-0.4.tar.gz", hash = "sha256:e5f2266a231322cc17519fbc3a3ba1c6335fed5a9a55abe0e598a35aea0ac32a"},
+]
