@@ -48,6 +48,15 @@ class Lexer(sly.Lexer):
     INT_CONST = r"[0-9]+\b"
     STRING_CONST = r'("[^"]*")|' + r"('[^']*')"
 
+    def __init__(self):
+        self.symbol_table = {}
+
+    def IDENT(self, t):
+        line = self.lineno
+        column = self.find_column(t)
+        occurrences = self.symbol_table.setdefault(t.value, [])
+        occurrences.append((line, column))
+
     ignore = "\t" + " "
 
     @_(r"\n+")
@@ -61,7 +70,6 @@ class Lexer(sly.Lexer):
         return t.index - last_newline
 
     def error(self, t):
-        symbol = t.value[0]  # apenas o primeiro caractere do token que se estava lendo
         line = self.lineno
         column = self.find_column(t)
         print(f"Error: unexpected symbol `{t.value[0]}` at {line}:{column}")
