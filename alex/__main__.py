@@ -1,3 +1,4 @@
+from pprint import pprint
 from sys import argv, stdin
 
 from alex import Lexer
@@ -17,6 +18,9 @@ def run():
 
     for token in lexer.tokenize(source):
         print(token)
+
+    print("\nSymbol table:")
+    pprint(lexer.symbol_table)
 
 
 if __name__ == "__main__":
