@@ -7,7 +7,7 @@ def sel_sort(int list, int size) {
         i = 0;
         for (i = j; i < size; i = i + 1) {
             if (list[i] < lesser) {
-                lesser = list[i]
+                lesser = list[i];
                 pos = i;
             }
         }
@@ -16,7 +16,7 @@ def sel_sort(int list, int size) {
         list[index] = list[pos];
         list[pos] = temp;
     }
-    return
+    return;
 }
 
 def bubble_sort(int list, int size) {
@@ -34,7 +34,7 @@ def bubble_sort(int list, int size) {
             }
         }
     }
-    return
+    return;
 }
 
 def binary_search(int list, int l, int r, int value, r_value) {
@@ -72,9 +72,9 @@ def main() {
     read n;
     list = new int[n];
     int i;
-    for (i = 0; i < n; i = i + 1){
+    for (i = 0; i < n; i = i + 1) {
         read x;
-        list[i] = x
+        list[i] = x;
     }
 
     print "would you like to sort with selection sort(1) or with bubble sort(2)";
@@ -84,7 +84,7 @@ def main() {
     if (sort_type == 1) {
         sel_sort(list, n);
     } else {
-        bubble_sort(list, n)
+        bubble_sort(list, n);
     }
 
     int r_value;
