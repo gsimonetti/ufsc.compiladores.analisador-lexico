@@ -1,6 +1,5 @@
 import sly
 
-
 class Lexer(sly.Lexer):
     tokens = {
         KW_DEF, KW_RETURN,
@@ -15,7 +14,7 @@ class Lexer(sly.Lexer):
     # o nome é o próprio símbolo
     literals = {
         "(", ")", "{", "}", "[", "]", ";", "=",
-        "+", "-", "*", "/", "%",
+        "+", "-", "*", "/", "%", ","
     }
 
     # declarando separadamente para especificar prioridades
