@@ -55,6 +55,7 @@ class Lexer(sly.Lexer):
         column = self.find_column(t)
         occurrences = self.symbol_table.setdefault(t.value, [])
         occurrences.append((line, column))
+        return t
 
     ignore = "\t" + " "
 
